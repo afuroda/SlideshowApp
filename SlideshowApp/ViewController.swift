@@ -35,6 +35,9 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(initTimer), userInfo: nil, repeats: true)
+        
+        
 
         imageButton.setImage(Image1, for: .normal)
         //画像を配列に追加
@@ -116,6 +119,12 @@ class ViewController: UIViewController{
     
     //戻りのsegue
     @IBAction func viewBack(_ segue:UIStoryboardSegue){
+        
+    }
+    
+    
+    //タイマーイニシャライザ用関数
+    @objc func initTimer(){
         
     }
     
